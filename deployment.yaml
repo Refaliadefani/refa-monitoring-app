@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: monitoring-container
-        image: refaliadefani/refa-monitoring-app:29
+        image: refaliadefani/refa-monitoring-app:latest
         ports:
         - containerPort: 8000
