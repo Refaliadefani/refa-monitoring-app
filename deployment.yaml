@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: refa-monitoring-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitoring
+  template:
+    metadata:
+      labels:
+        app: monitoring
+    spec:
+      containers:
+      - name: monitoring-container
+        image: refaliadefani/refa-monitoring-app:latest
+        ports:
+        - containerPort: 8000
